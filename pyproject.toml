@@ -1,0 +1,27 @@
+[project]
+name = "agent-memory"
+version = "0.1.0"
+description = "Agent混合记忆管理最小实现 - 支持短时记忆、对话记忆、长时向量记忆"
+requires-python = ">=3.9"
+dependencies = [
+    "pydantic>=2.0",
+    "scikit-learn>=1.0",
+    "numpy>=1.20",
+    "click>=8.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[project.scripts]
+agent-memory = "agent_memory.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agent_memory"]

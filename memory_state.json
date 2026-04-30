@@ -1,0 +1,137 @@
+{
+  "conversation_id": "demo_session_001",
+  "config": {
+    "short_term": {
+      "max_messages": 5,
+      "max_tokens": 500,
+      "eviction_threshold": 0.6
+    },
+    "conversation": {
+      "compression_threshold": 0.7,
+      "max_summary_tokens": 500,
+      "summary_chunk_size": 5,
+      "enable_summarization": true
+    },
+    "long_term": {
+      "embedding_type": "tfidf",
+      "top_k": 3,
+      "similarity_threshold": 0.1,
+      "deduplication_threshold": 0.7,
+      "max_documents": 1000,
+      "decay_factor": 0.95
+    }
+  },
+  "short_term": [
+    {
+      "role": "assistant",
+      "content": "这是关于您问题的回复。当前短时记忆有 3 条消息。",
+      "metadata": {},
+      "timestamp": "2026-04-30T23:11:37.576944",
+      "id": "assistant_1777561897.576944"
+    },
+    {
+      "role": "user",
+      "content": "谢谢你的推荐，我还想了解一下Python。",
+      "metadata": {},
+      "timestamp": "2026-04-30T23:11:37.577136",
+      "id": "user_1777561897.577136"
+    },
+    {
+      "role": "assistant",
+      "content": "这是关于您问题的回复。当前短时记忆有 3 条消息。",
+      "metadata": {},
+      "timestamp": "2026-04-30T23:11:37.577339",
+      "id": "assistant_1777561897.577339"
+    }
+  ],
+  "conversation": {
+    "summaries": [
+      "用户询问: 你好，我想了解一下中国的城市。",
+      "助手回复: 这是关于您问题的回复。当前短时记忆有 1 条消息。",
+      "用户询问: 北京和上海哪个更适合旅游？",
+      "助手回复: 这是关于您问题的回复。当前短时记忆有 3 条消息。",
+      "用户询问: 北京有哪些著名的景点？",
+      "助手回复: 这是关于您问题的回复。当前短时记忆有 3 条消息。",
+      "用户询问: 故宫和长城哪个更值得去？",
+      "助手回复: 这是关于您问题的回复。当前短时记忆有 3 条消息。",
+      "用户询问: 上海有什么特色美食？"
+    ],
+    "key_facts": [],
+    "_summary_tokens": 184,
+    "_facts_tokens": 0
+  },
+  "long_term": {
+    "documents": [
+      {
+        "id": "daa11e3490ab0d23",
+        "memory_type": "long_term",
+        "content": "北京是中华人民共和国的首都，位于中国北部，是政治、文化中心。",
+        "source": "百科知识",
+        "tags": [
+          "中国",
+          "城市",
+          "首都"
+        ],
+        "timestamp": "2026-04-30T23:11:37.568622",
+        "importance": 0.9,
+        "is_active": true,
+        "metadata": {}
+      },
+      {
+        "id": "7a27fd08a9c2c841",
+        "memory_type": "long_term",
+        "content": "上海是中国最大的城市，位于长江入海口，是经济、金融中心。",
+        "source": "百科知识",
+        "tags": [
+          "中国",
+          "城市",
+          "经济"
+        ],
+        "timestamp": "2026-04-30T23:11:37.568955",
+        "importance": 0.9,
+        "is_active": true,
+        "metadata": {}
+      },
+      {
+        "id": "6fb535672395e8d2",
+        "memory_type": "long_term",
+        "content": "Python是一种高级编程语言，由Guido van Rossum于1991年创建。",
+        "source": "编程知识",
+        "tags": [
+          "编程",
+          "语言",
+          "Python"
+        ],
+        "timestamp": "2026-04-30T23:11:37.571496",
+        "importance": 0.8,
+        "is_active": true,
+        "metadata": {}
+      },
+      {
+        "id": "4640cb2cba15bfea",
+        "memory_type": "long_term",
+        "content": "北京是中国的经济中心。",
+        "source": "错误信息",
+        "tags": [
+          "错误"
+        ],
+        "timestamp": "2026-04-30T23:11:37.581810",
+        "importance": 0.1,
+        "is_active": false,
+        "metadata": {}
+      },
+      {
+        "id": "779e3034649fa450",
+        "memory_type": "long_term",
+        "content": "北京是中国的政治和文化中心，上海是中国的经济中心。",
+        "source": "correction:demo_session_001",
+        "tags": [],
+        "timestamp": "2026-04-30T23:11:37.585645",
+        "importance": 1.0,
+        "is_active": true,
+        "metadata": {}
+      }
+    ]
+  },
+  "saved_at": "2026-04-30T23:11:37.590053"
+}
